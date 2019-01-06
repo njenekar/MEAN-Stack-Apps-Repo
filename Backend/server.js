@@ -81,4 +81,5 @@ router.route('/issues/delete/:id').get((req, res) => {
 app.use('/', router);
 
 app.get('/', (req, res) => res.send('Hello World'));
-app.listen(4000, () => console.log('Express server running on port 4000'));
+var port=process.env.port ||4000;
+app.listen(port, () => console.log('Express server running on port '+port));
